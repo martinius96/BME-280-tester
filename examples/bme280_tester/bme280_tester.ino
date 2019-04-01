@@ -4,10 +4,7 @@
 Adafruit_BME280 bme;
 void setup() {
   Serial.begin(115200);
-  if (!bme.begin(BME280_ADRESA)) {
-    Serial.println("BME280 senzor nenalezen, zkontrolujte zapojeni!");
-    while (1);
-  }
+  bme.begin(BME280_ADRESA);
 }
 
 void loop() {
